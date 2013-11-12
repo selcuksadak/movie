@@ -1,0 +1,1 @@
+Kisisel film arsivimle ilgili uygulamam.
