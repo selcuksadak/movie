@@ -1,3 +1,28 @@
 <% provide(:title, 'Yeni Kullanıcı') %>
 <h1>Yeni Kullanıcı</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+<div class="row">
+	<div class="span6 offset3">
+		<%= form_for(@user) do |f| %>
+
+			<%= render 'shared/error_messages' %>
+			
+			<%= f.label :name, "Ad Soyad" %>
+			<%= f.text_field :name %>
+
+			<%= f.label :email, "Email" %>
+			<%= f.text_field :email %>
+
+			<%= f.label :username, "Kullanıcı Adı" %>
+			<%= f.text_field :username %>
+
+			<%= f.label :password, "Şifre" %>
+			<%= f.password_field :password %>
+
+			<%= f.label :password_confirmation, "Tekrar" %>
+			<%= f.password_field :password_confirmation %>
+
+			<%= f.submit "Kullanıcı oluştur", class: "btn btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>
